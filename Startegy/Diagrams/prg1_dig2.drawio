@@ -317,31 +317,34 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="313xDFvWnkOnAzLfwPeW-13" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;u&gt;Update Phone No&lt;/u&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="370" y="-1230" width="210" height="40" as="geometry" />
+          <mxGeometry x="375" y="-1177.5" width="210" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="313xDFvWnkOnAzLfwPeW-15" target="313xDFvWnkOnAzLfwPeW-16">
+        <mxCell id="313xDFvWnkOnAzLfwPeW-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="313xDFvWnkOnAzLfwPeW-16" target="313xDFvWnkOnAzLfwPeW-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-15" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Step 01&lt;/font&gt;&lt;/div&gt;&lt;font size=&quot;3&quot; style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;Does Email&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot; style=&quot;&quot;&gt;Exist&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot; style=&quot;&quot;&gt;&lt;u&gt;/user/uniqueEmail&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="45" y="-1167.5" width="160" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-16" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Step 02&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;Enter New&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;Email&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="275" y="-1167.5" width="140" height="270" as="geometry" />
+        <mxCell id="313xDFvWnkOnAzLfwPeW-16" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Step 01&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;new phone&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;no is&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;exists or not&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;/user/uniquePhone&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-987.5" width="150" height="230" as="geometry" />
         </mxCell>
         <mxCell id="313xDFvWnkOnAzLfwPeW-17" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;User Service&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="665" y="-1167.5" width="220" height="290" as="geometry" />
+          <mxGeometry x="710" y="-1017.5" width="220" height="290" as="geometry" />
         </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-18" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;Update old email&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&amp;nbsp;with&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;new email&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="460" y="-1122.5" width="160" height="80" as="geometry" />
+        <mxCell id="313xDFvWnkOnAzLfwPeW-24" value="&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;If Phone No&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Already&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: medium; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Present&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;font-size: medium; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;or&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-970" width="140" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-19" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;u&gt;/user/updateEmail&lt;/u&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="455" y="-1027.5" width="170" height="40" as="geometry" />
+        <mxCell id="313xDFvWnkOnAzLfwPeW-29" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Phone no&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;is not&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;present initaly&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="-867.5" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-20" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=12;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="10" y="-1190" width="910" height="335" as="geometry" />
-        </mxCell>
-        <mxCell id="313xDFvWnkOnAzLfwPeW-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.015;entryY=0.464;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="313xDFvWnkOnAzLfwPeW-16" target="313xDFvWnkOnAzLfwPeW-17">
+        <mxCell id="313xDFvWnkOnAzLfwPeW-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="313xDFvWnkOnAzLfwPeW-30" target="313xDFvWnkOnAzLfwPeW-17">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="313xDFvWnkOnAzLfwPeW-30" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Step 02&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: medium; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;enter new&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;phone number&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-987.5" width="140" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="313xDFvWnkOnAzLfwPeW-40" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;Update phone&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&amp;nbsp;with the help&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;of email&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="535" y="-970" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="313xDFvWnkOnAzLfwPeW-42" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;u&gt;user/updatePhone&lt;/u&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="-867.5" width="170" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

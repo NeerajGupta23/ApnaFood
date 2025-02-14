@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.user.dto.Acknowledge;
 import com.user.dto.EmailUpdateRequest;
+import com.user.dto.PhoneUpdateRequest;
 import com.user.dto.UserDTO;
 import com.user.entity.User;
 import com.user.service.Interface.CloudImageService;
@@ -36,6 +37,16 @@ public class UserController {
 	private UserDatabaseService databaseService;
 	
 	
+	// create user
+	@PostMapping("/create")
+	public ResponseEntity<Acknowledge> createUser(@RequestBody @Valid User user) {
+		databaseService.createUser(user);	
+
+		Acknowledge acknowledge = new Acknowledge("User is created successfully...");
+		return new ResponseEntity<>(acknowledge, HttpStatus.CREATED);
+	}
+	
+	// exists email
 	@GetMapping("/uniqueEmail/{email}")
 	public ResponseEntity<Boolean> emailExist(
 			@Pattern(regexp = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$", message = "Invalid email format")
@@ -46,14 +57,16 @@ public class UserController {
 		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
 	
-	
-	@PostMapping("/create")
-	public ResponseEntity<Acknowledge> createUser(@RequestBody @Valid User user) {
-		databaseService.createUser(user);	
-
-		Acknowledge acknowledge = new Acknowledge("User is created successfully...");
-		return new ResponseEntity<>(acknowledge, HttpStatus.CREATED);
+	// update email
+	@PutMapping("/updateEmail")
+	public ResponseEntity<Acknowledge> updateEmail(@RequestBody @Valid EmailUpdateRequest emailUpdateRequest) {
+		System.out.println(emailUpdateRequest);
+		databaseService.updateEmail(emailUpdateRequest.getNewEmail(), emailUpdateRequest.getOldEmail());
+		
+		Acknowledge acknowledge = new Acknowledge("User's email is updated succesfully...");
+		return new ResponseEntity<>(acknowledge, HttpStatus.OK);
 	}
+	
 	
 	
 	// verify Old password
@@ -71,18 +84,28 @@ public class UserController {
 		return new ResponseEntity<>(acknowledge, HttpStatus.OK);
 	}
 	
-	// update email
-	@PutMapping("/updateEmail")
-	public ResponseEntity<Acknowledge> updateEmail(@RequestBody @Valid EmailUpdateRequest emailUpdateRequest) {
-		System.out.println(emailUpdateRequest);
-		databaseService.updateEmail(emailUpdateRequest.getNewEmail(), emailUpdateRequest.getOldEmail());
+
+
+	// exists phone
+	@GetMapping("/uniquePhone/{phone}")
+	public ResponseEntity<Boolean> phoneExist(
+			@Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be exactly 10 digits")
+			@PathVariable String phone
+		) {
+		Boolean result = databaseService.phoneExists(phone);	
+		return new ResponseEntity<>(result, HttpStatus.OK);
+	}
+	
+	// update phone 
+	@PutMapping("/updatePhone")
+	public ResponseEntity<Acknowledge> updatePhone(@RequestBody @Valid PhoneUpdateRequest phoneUpdateRequest) {
+		System.out.println(phoneUpdateRequest);
+		databaseService.updatePhone(phoneUpdateRequest.getEmail(), phoneUpdateRequest.getPhone());
 		
-		Acknowledge acknowledge = new Acknowledge("User's email is updated succesfully...");
+		Acknowledge acknowledge = new Acknowledge("User's phone is updated succesfully...");
 		return new ResponseEntity<>(acknowledge, HttpStatus.OK);
 	}
 	
-	
-	// update phone 
 	
 	
 	// update other except password, email and phone

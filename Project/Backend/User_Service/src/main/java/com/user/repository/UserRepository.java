@@ -13,6 +13,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	@Query(value = "select userId from User where email = :email")
 	public Integer selectUserIdByEmail(String email);
+
+	@Query(value = "select userId from User where mobileNo = :phone")
+	public Integer selectUserIdByPhone(String phone);
 	
 	@Query(value = "select password from User where email = :email")
 	public String selectUserPwdByEmail(String email);
@@ -26,5 +29,10 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	@Modifying
 	@Transactional
 	public Integer updateEmail(@Param("newEmail")String newEmail, @Param("oldEmail")String oldEmail);
+
+	@Query(value = "update User set mobileNo = :phone where email = :email")
+	@Modifying
+	@Transactional
+	public Integer updatePhone(@Param("email")String email, @Param("phone")String phone);
 
 }

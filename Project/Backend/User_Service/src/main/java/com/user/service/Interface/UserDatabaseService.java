@@ -15,6 +15,10 @@ public interface UserDatabaseService {
 	
 	void updateEmail(String newEmail, String oldEmail) throws UserException;
 	
+	Boolean phoneExists(String phone);
+
+	void updatePhone(String email, String newPhone) throws UserException;
+	
 	Boolean updateUser(User user) throws UserException;
 	
 	Boolean deleteUser(User user) throws UserException;
