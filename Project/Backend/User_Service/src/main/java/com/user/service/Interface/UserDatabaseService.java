@@ -5,15 +5,21 @@ import com.user.exception.UserException;
 
 public interface UserDatabaseService {
 	
-	void createUser(User user) throws UserException;
+	Boolean emailExists(String email);
+	
+	void createUser(User user);
+	
+	Boolean verifyOldPassword(String email, String password);
+	
+	void updatePassword(String email, String password) throws UserException;
+	
+	void updateEmail(String newEmail, String oldEmail) throws UserException;
 	
 	Boolean updateUser(User user) throws UserException;
 	
 	Boolean deleteUser(User user) throws UserException;
 	
 	Boolean createPassword(User user) throws UserException;
-	
-	Boolean changePassword(User user) throws UserException;
 	
 	Boolean selectUserByEmail(User user) throws UserException;
 	

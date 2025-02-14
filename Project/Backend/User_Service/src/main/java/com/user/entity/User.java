@@ -14,6 +14,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,14 +34,18 @@ public class User implements Serializable {
 	private Integer userId;
 
 	@Column(name = "name", nullable = false)
+	@NotBlank(message = "Name is mandatory")
 	private String name;
 
 	@Column(name = "email", nullable = false, unique = true)
+	@NotBlank(message = "Email is mandatory")
+	@Email(message = "Email format is invalid")
 	private String email;
 
 	@Column(name = "password", nullable = false)
+	@NotBlank(message = "Password is mandatory")
 	private String password;
-
+	
 	@Column(name = "mobile", unique = true)
 	private String mobileNo;
 

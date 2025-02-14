@@ -18,10 +18,16 @@ public class UserDatabaseServiceImpl implements UserDatabaseService{
 	private UserRepository repository;
 	
 	@Override
-	public void createUser(User user) throws UserException {
-		if(user == null)
-			throw new UserException("Expected user passed null for user creation!"); 	
-		
+	public Boolean emailExists(String email) {
+		Integer id = repository.selectUserIdByEmail(email);
+		if(id == null) {
+			return false;			
+		}
+		return true;
+	}
+	
+	@Override
+	public void createUser(User user) {
 		user.setRole(Role.User);
 		user.setCreatedAt(LocalDateTime.now());
 		user.setUpdatedAt(LocalDateTime.now());
@@ -29,7 +35,39 @@ public class UserDatabaseServiceImpl implements UserDatabaseService{
 			
 		repository.save(user);			
 	}
+	
 
+	@Override
+	public Boolean verifyOldPassword(String email, String password) {
+		String pwdFromDB = repository.selectUserPwdByEmail(email);
+		if(pwdFromDB.equals(password)) {
+			return true;
+		}
+		return false;
+	}
+	
+
+	@Override
+	public void updatePassword(String email, String password) throws UserException{
+		Integer updatedRow = repository.updatePassword(email, password);
+		
+		if(updatedRow > 1)
+			throw new UserException("updated password to more than one row!");
+		if(updatedRow == null || updatedRow < 1) 
+			throw new UserException("password is not updated!");
+	}
+
+
+	@Override
+	public void updateEmail(String newEmail, String oldEmail) throws UserException{
+		Integer updatedRow = repository.updateEmail(newEmail, oldEmail);
+		
+		if(updatedRow > 1)
+			throw new UserException("updated email to more than one row!");
+		if(updatedRow == null || updatedRow < 1) 
+			throw new UserException("email is not updated!");
+	}
+	
 	@Override
 	public Boolean updateUser(User user) throws UserException {	
 		return null;
@@ -43,12 +81,6 @@ public class UserDatabaseServiceImpl implements UserDatabaseService{
 
 	@Override
 	public Boolean createPassword(User user) throws UserException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Boolean changePassword(User user) throws UserException {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -76,5 +108,7 @@ public class UserDatabaseServiceImpl implements UserDatabaseService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 
 }
